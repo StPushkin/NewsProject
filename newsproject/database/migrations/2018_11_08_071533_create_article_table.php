@@ -23,8 +23,8 @@ class CreateArticleTable extends Migration
             $table->integer('article_journalist_id')->unsigned();
             $table->foreign('article_journalist_id')->references('id')->on('journalist');
             $table->longText('article_text');
-            $table->string('article_image');
-            $table->binary('article_istop')->default(0);
+            $table->string('article_image',255);
+            $table->boolean('article_istop');
         });
     }
 
