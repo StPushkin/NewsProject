@@ -18,9 +18,9 @@ class CreateArticleTable extends Migration
             $table->string('article_title',50);
             $table->timestamps();
             $table->dateTime('article_creatingdate');
-            $table->integer('article_category_id')->unsigned();
+            $table->integer('article_category_id')->unsigned()->nullable();
             $table->foreign('article_category_id')->references('id')->on('category');
-            $table->integer('article_journalist_id')->unsigned();
+            $table->integer('article_journalist_id')->unsigned()->nullable();
             $table->foreign('article_journalist_id')->references('id')->on('journalist');
             $table->longText('article_text');
             $table->string('article_image',255);
