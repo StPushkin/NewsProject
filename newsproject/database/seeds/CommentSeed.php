@@ -14,7 +14,8 @@ class CommentSeed extends Seeder
     {
         DB::table('comment')->insert([
             'comment_text' =>'Wikipedia seems to think hydrazine freezes at 2°C. Just what sort of snow are you shovelling that is still frozen at 2°C?',
-           
+            'comment_article_id'=>'1',
+            'comment_user_id'=>'1'
         ]);
     }
 }

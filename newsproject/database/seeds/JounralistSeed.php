@@ -19,6 +19,7 @@ class JounralistSeed extends Seeder
             'journalist_name' => 'Jhon',
             'journalist_surname' => 'Doe',
             'journalist_biography' => 'Testing journalist account',
+            'journalist_photo' =>'C:\xampp\htdocs\NewsProject\newsproject\public\images\person.jpg'
         ]);
     }
 }

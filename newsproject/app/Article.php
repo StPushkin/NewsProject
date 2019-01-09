@@ -1,12 +1,26 @@
 <?php
 
-namespace App\Models;
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
 class Article extends Model
 {
-    protected $fillable = [
-        '`article_journalist_id` ',
-    ];
+    protected $table = 'article';
+    protected $primaryKey='id';
+
+    public function category() 
+    {
+        return $this->belongsTo(Category::class);
+    }
+
+    public function comments() 
+    {
+        return $this->hasMany(Comment::class);
+    }
+
+    public function journalist() 
+    {
+        return $this->belongsTo(JournalistInfo::class);
+    }
 }
