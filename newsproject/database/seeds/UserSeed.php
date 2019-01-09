@@ -13,8 +13,8 @@ class UserSeed extends Seeder
     public function run()
     {
         DB::table('users')->insert([
-            'login' => 'vlad',
-            'email' => 'vlad'.'@gmail.com',
+            'login' => 'test',
+            'email' => 'test'.'@gmail.com',
             'password' => '123456',
         ]);
     }

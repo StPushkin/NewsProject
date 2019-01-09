@@ -13,12 +13,12 @@ class JounralistSeed extends Seeder
     public function run()
     {
         DB::table('journalist')->insert([
-            'login' => 'jounrnalist',
+            'login' => 'testjourn',
             'email' => 'journal'.'@gmail.com',
             'password' => '654321',
-            'journalist_name' => 'jhon',
-            'journalist_surname' => 'jonovits',
-            'journalist_biography' => 'booring biography',
+            'journalist_name' => 'Jhon',
+            'journalist_surname' => 'Doe',
+            'journalist_biography' => 'Testing journalist account',
         ]);
     }
 }

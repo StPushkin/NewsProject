@@ -13,7 +13,7 @@ class CommentSeed extends Seeder
     public function run()
     {
         DB::table('comment')->insert([
-            'comment_text' =>'privet otli4naja statja',
+            'comment_text' =>'Wikipedia seems to think hydrazine freezes at 2°C. Just what sort of snow are you shovelling that is still frozen at 2°C?',
            
         ]);
     }

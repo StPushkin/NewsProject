@@ -17,7 +17,7 @@ class CreateArticleTable extends Migration
             $table->increments('id');
             $table->string('article_title',50);
             $table->timestamps();
-            $table->dateTime('article_creatingdate');
+            $table->timestamp('article_creatingdate')->useCurrent();
             $table->integer('article_category_id')->unsigned()->nullable();
             $table->foreign('article_category_id')->references('id')->on('category');
             $table->integer('article_journalist_id')->unsigned()->nullable();
