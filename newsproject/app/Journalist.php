@@ -5,11 +5,11 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable
+class Journalist extends Authenticatable
 {
     use Notifiable;
 
-    protected $fillable = [
+    protected $fillable = [ 
         'login', 'email', 'password',
     ];
 

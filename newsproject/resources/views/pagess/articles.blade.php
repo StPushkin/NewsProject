@@ -65,32 +65,22 @@
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+    @extends('layouts.app')
+  
+    
+    @section('content')
+    <h1 class="text-center bg-primary">Films</h1>
+    
+        @foreach ($articles as $article)
+            <div class="list-group">
+           
+                <a  class="list-group-item list-group-item-info">{{$article->article_title}}</a>     
             </div>
-        </div>
+        @endforeach
+    
+@stop
+
+   
+
     </body>
 </html>

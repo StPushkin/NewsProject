@@ -16,14 +16,15 @@ class CreateJournalistTable extends Migration
         Schema::create('journalist', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->string('journalist_login');
-            $table->string('password');
-            $table->string('email')->unique();
+            $table->string('login',20);
+            $table->string('password',20);
+            $table->string('email',20)->unique();
             $table->timestamp('email_verified_at')->nullable();
+            $table->rememberToken();
             $table->string('journalist_name',20);
             $table->string('journalist_surname',20);
             $table->longText('journalist_biography');
-            $table->string('journalist_photo');
+            $table->string('journalist_photo',255);
         });
     }
 

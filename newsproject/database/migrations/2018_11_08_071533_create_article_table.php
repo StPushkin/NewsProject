@@ -17,14 +17,14 @@ class CreateArticleTable extends Migration
             $table->increments('id');
             $table->string('article_title',50);
             $table->timestamps();
-            $table->dateTime('article_creatingdate');
-            $table->integer('article_category_id')->unsigned();
-            $table->foreign('article_category_id')->references('id')->on('category');
-            $table->integer('article_journalist_id')->unsigned();
-            $table->foreign('article_journalist_id')->references('id')->on('journalist');
+            $table->timestamp('article_creatingdate')->useCurrent();
             $table->longText('article_text');
-            $table->string('article_image');
-            $table->binary('article_istop')->default(0);
+            $table->string('article_image',255);
+            $table->boolean('article_istop');
+            $table->integer('article_category_id')->unsigned()->nullable();
+            $table->foreign('article_category_id')->references('id')->on('category');
+            $table->integer('article_journalist_id')->unsigned()->nullable();
+            $table->foreign('article_journalist_id')->references('id')->on('journalist');
         });
     }
 
