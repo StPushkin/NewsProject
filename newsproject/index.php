@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="css/style.css">
         </head>
     <body>
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-dark sm navbar-blue">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">News</a>
@@ -41,11 +41,15 @@
             <div class = "wrapper">
                     
                         <div class="header">
+                                <div class="col-md-1 col-lg-2">
+                                                <form class ="search">
+                                                    
+                                                    
+                                                </form>
+                                            </div>
                                 <div class= "inner-header">
                                     <div class="row">
-                                            <div class="col-md-10 col-lg-1">
-                                            <input type="search" class="form-control" id="search">
-                                            </div>
+                                            
                                         </div>
                                 </div> 
                             </div>   
