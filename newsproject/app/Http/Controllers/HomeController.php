@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
 
-    public function index()
+    public function welcom()
     {
         return view('pagess/welcom');
     }
@@ -38,7 +38,11 @@ class HomeController extends Controller
         $categories=\App\Category::all();
         return view();
     }
-    
+    public function journalists()
+    {
+        $journalists=\App\Journalist::all();
+        return view('pagess.articles',compact('journalists'));
+    }
 
 
 }

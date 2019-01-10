@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\JournalistInfo;
 
 class JournalistController extends Controller
+
 {
     public function editJournalist(JournalistInfo $journalist) { 
 		return view();

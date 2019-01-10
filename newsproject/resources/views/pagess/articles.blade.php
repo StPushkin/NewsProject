@@ -69,12 +69,12 @@
   
     
     @section('content')
-    <h1 class="text-center bg-primary">Films</h1>
+    <h1 class="text-center bg-primary">Articles</h1>
     
         @foreach ($articles as $article)
             <div class="list-group">
-           
-                <a  class="list-group-item list-group-item-info">{{$article->article_title}}</a>     
+            <a   >name: </a> 
+                <a  class="list-group-item list-group-item-info" >{{$article->article_title}}</a>     
             </div>
         @endforeach
     

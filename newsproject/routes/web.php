@@ -2,23 +2,14 @@
 
 
 
-
-
-
-
-
-
-
-
 /***************    Site routes  **********************************/
-Route::get('/', 'HomeController@index');
-Route::get('home', 'HomeController@index');
+Route::get('/', 'HomeController@articles');
+Route::get('welcom', 'HomeController@welcom');
 Route::get('articlestop', 'HomeController@top');
-Route::get('category', 'HomeController@index');
-Route::get('articles', 'HomeController@index');
+
 Route::get('bytop', 'HomeController@bytop');
 Route::get('bycategory', 'HomeController@bycategory');
-
+Route::get('journalist', 'HomeController@bycategory');
 Route::get('articles', 'HomeController@articles');
 Route::get('article/{article}/show', 'ArticleController@show');
 Route::get('article/{article}/add', 'ArticleController@add');

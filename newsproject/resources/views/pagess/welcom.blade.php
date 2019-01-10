@@ -67,7 +67,7 @@
     <body>
     @extends('layouts.app')
   
-    
+    <div>main page</div>
   
 
    
