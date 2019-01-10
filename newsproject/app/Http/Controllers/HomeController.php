@@ -9,15 +9,16 @@ class HomeController extends Controller
 
     public function index()
     {
-        return view('welcome');
+        return view('pagess/welcom');
     }
 
     public function articles() 
     {
-        $articles=\App\Article::all();
-        return view();
+        $articles=\DB::select('select * from article order by article_title');
+        return view('pagess.articles',compact('articles'));
     }
-
+   
+    
     public function articlesByCategory($id)
     {
         $articles=\App\Category::where('id', $id)->first()->articles()
@@ -37,6 +38,7 @@ class HomeController extends Controller
         $categories=\App\Category::all();
         return view();
     }
+    
 
 
 }

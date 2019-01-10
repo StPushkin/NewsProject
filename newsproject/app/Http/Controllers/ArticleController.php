@@ -14,6 +14,7 @@ class ArticleController extends Controller
             'article_category_id'=>'required',
             'article_journalist_id'=>'required'
         ]);
+        
         $article=new Article;
         $article->article_title=$request->article_title;
         $article->article_text=$request->article_text;
@@ -26,7 +27,10 @@ class ArticleController extends Controller
     
     public function editArticle(Article $article) { 
 		return view();
-	}
+    }
+    public function show(News $news) {
+        return view();
+    }
 
     public function updateActor(Request $request, Article $actor) {
         $article->article_title=$request->article_title;
