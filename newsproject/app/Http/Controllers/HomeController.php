@@ -16,16 +16,14 @@ class HomeController extends Controller
     public function articles() 
     {
         $articles=\DB::select('select * from article order by article_creatingdate');
-        $cat=\DB::select('select * from category');
         return view('pagess.articles',compact('articles','cat'));
     }
    
     
     public function articlesByCategory($id)
     {
-        $articles=\App\Category::where('id', $id)->first()->articles()
-               ->orderBy('article_creatingdate', 'desc')->get();
-        return view();
+        $articles=\App\Category::where('id', $id)->first()->articles()->get();
+        return view('pagess.articles',compact('articles'));
     }
 
     public function articlesByTop()
@@ -37,7 +35,7 @@ class HomeController extends Controller
     public function categories()
     {
         $categories=\App\Category::all();
-        return view();
+        return view('pagess.categories',compact('categories'));
     }
     public function journal() 
     {
