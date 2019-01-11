@@ -15,7 +15,8 @@ class HomeController extends Controller
     public function articles() 
     {
         $articles=\DB::select('select * from article order by article_title');
-        return view('pagess.articles',compact('articles'));
+        $cat=\DB::select('select * from category');
+        return view('pagess.articles',compact('articles','cat'));
     }
    
     
@@ -38,10 +39,24 @@ class HomeController extends Controller
         $categories=\App\Category::all();
         return view();
     }
+<<<<<<< HEAD
     public function journalists()
     {
         $journalists=\App\Journalist::all();
         return view('pagess.articles',compact('journalists'));
+=======
+    public function journal() 
+    {
+        $journal=\DB::select('select * from journalist order by journalist_name');
+        return view('pagess.article',compact('journal'));
+    }
+ 
+  
+    public function articlesById($id)
+    {
+        $art=\App\Article::find($id);
+        return view('pagess.articles', compact('art'));
+>>>>>>> 3abaed00020454539897007aa6d3affe509d0f6d
     }
 
 
