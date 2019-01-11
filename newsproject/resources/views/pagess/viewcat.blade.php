@@ -73,7 +73,7 @@
     @foreach ($articles as $art)
    
     @if($article->id==$art->article_category_id)
-    <a   >Article:  {{ $art->article_title }}</a> 
+    <a  class="list-group-item list-group-item-info"  href="view/{{$art->id}}">Article:  {{ $art->article_title }}</a> 
     @endif
     
     @endforeach
