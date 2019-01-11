@@ -16,7 +16,7 @@ class CreateJournalistTable extends Migration
         Schema::create('journalist', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->string('login',20);
+            $table->string('login',20)->unique();;
             $table->string('password',20);
             $table->string('email',20)->unique();
             $table->timestamp('email_verified_at')->nullable();

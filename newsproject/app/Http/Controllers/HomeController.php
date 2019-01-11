@@ -9,12 +9,13 @@ class HomeController extends Controller
 
     public function welcom()
     {
-        return view('pagess/welcom');
+        $articles=\DB::select('select * from article order by article_title');
+        return view('pagess/welcom',compact ('articles'));
     }
 
     public function articles() 
     {
-        $articles=\DB::select('select * from article order by article_title');
+        $articles=\DB::select('select * from article order by article_creatingdate');
         $cat=\DB::select('select * from category');
         return view('pagess.articles',compact('articles','cat'));
     }
@@ -29,9 +30,8 @@ class HomeController extends Controller
 
     public function articlesByTop()
     {
-        $articles=\App\Article::where('article_istop', 1)->first()->articles()
-                ->orderBy('article_creatingdate', 'desc')->get();
-        return view();
+        $articles=\App\Article::where('article_istop', 1)->get();
+        return view('pagess.articletop',compact('articles'));
     }
 
     public function categories()

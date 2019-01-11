@@ -45,6 +45,14 @@ return [
             'driver' => 'token',
             'provider' => 'users',
         ],
+        'journalist' => [
+            'driver' => 'session',
+            'provider' => 'journalists',
+        ],
+        'journalist-api' => [
+            'driver' => 'token',
+            'provider' => 'journalists',
+        ],
     ],
 
     /*
@@ -68,6 +76,10 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\User::class,
+        ],
+        'journalists' => [
+            'driver' => 'eloquent',
+            'model' => App\Journalist::class,
         ],
 
         // 'users' => [
@@ -94,6 +106,11 @@ return [
     'passwords' => [
         'users' => [
             'provider' => 'users',
+            'table' => 'password_resets',
+            'expire' => 60,
+        ],
+        'journalists' => [
+            'provider' => 'journalists',
             'table' => 'password_resets',
             'expire' => 60,
         ],
