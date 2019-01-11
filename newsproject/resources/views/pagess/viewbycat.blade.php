@@ -73,8 +73,10 @@
     @foreach ($articles as $art)
    
     @if($article->id==$art->article_category_id)
-    <a   >Article:  {{ $art->article_title }}</a> 
+    <a   href="view/{{$art->id}}">Article:  {{ $art->article_title }}</a> 
     @endif
     
     @endforeach
     @stop
+
+  

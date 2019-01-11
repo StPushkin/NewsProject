@@ -62,7 +62,8 @@ class ArticleController extends Controller
     {
         $article = Category::find($id);
         $articles=\DB::select('select * from article order by article_title');
-               
-        return view('pagess.viewcat',compact ('article','articles','cat'));
+        
+        
+        return view('pagess.viewbycat',compact ('article','articles','cat'));
     }
 }

@@ -28,7 +28,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = 'main/successlogin';
 
     /**
      * Create a new controller instance.
@@ -49,9 +49,9 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'login' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:6|confirmed',
+            'login' => 'required',
+            'email' => 'required',
+            'password' => 'required',
         ]);
     }
 
@@ -69,4 +69,5 @@ class RegisterController extends Controller
             'password' => bcrypt($data['password']),
         ]);
     }
+    
 }

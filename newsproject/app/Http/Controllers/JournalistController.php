@@ -20,5 +20,10 @@ class JournalistController extends Controller
         $journalist->update();
 		return redirect();
     }
-    
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('journ');
+    }
+
 }

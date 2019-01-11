@@ -16,5 +16,9 @@ class CategorySeed extends Seeder
             'category_name' =>'Cosmology',
            
         ]);
+        DB::table('category')->insert([
+            'category_name' =>'olology',
+           
+        ]);
     }
 }

@@ -39,12 +39,6 @@ class HomeController extends Controller
         $categories=\App\Category::all();
         return view();
     }
-<<<<<<< HEAD
-    public function journalists()
-    {
-        $journalists=\App\Journalist::all();
-        return view('pagess.articles',compact('journalists'));
-=======
     public function journal() 
     {
         $journal=\DB::select('select * from journalist order by journalist_name');
@@ -56,7 +50,6 @@ class HomeController extends Controller
     {
         $art=\App\Article::find($id);
         return view('pagess.articles', compact('art'));
->>>>>>> 3abaed00020454539897007aa6d3affe509d0f6d
     }
 
 

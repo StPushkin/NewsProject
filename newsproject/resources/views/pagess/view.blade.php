@@ -77,7 +77,7 @@
     @if($articl->article_journalist_id==$journ->id && $article->id==$articl->id)
             <div class="list-group">
             <a   >name journalist: </a> 
-                <a  class="list-group-item list-group-item-info" >{{ $journ->journalist_name }}</a>   
+                <a  class="list-group-item list-group-item-info" href="journalist/{{$journ->id}}" >{{ $journ->journalist_name }}</a>   
                  
                 <a   >ARTICLE: </a> <a>{!! $article->article_text !!}</a>
     
