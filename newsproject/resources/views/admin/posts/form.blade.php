@@ -18,6 +18,15 @@
                
             @endforeach 
             </select>
+            <select  name="article_journalist_id" id="" >
+            @foreach($jr as $journalist)
+           
+                <option  >{{$journalist->id}}){{$journalist->journalist_name}}</option> 
+               
+           
+               
+            @endforeach 
+            </select>
 
 
 

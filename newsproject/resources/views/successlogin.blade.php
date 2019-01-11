@@ -23,6 +23,7 @@
      <strong>Welcome {{ Auth::user()->email }}</strong>
      <br />
      <a href="{{ url('/main/logout') }}">Logout</a>
+     <a href="{{ url('/home') }}">go main</a>
     </div>
    @else
     <script>window.location = "/main";</script>

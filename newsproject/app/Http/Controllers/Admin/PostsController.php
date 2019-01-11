@@ -67,10 +67,12 @@ class PostsController extends Controller
 
         return view('admin.posts.show', compact('post'));
     }
+   
     public function cate() 
     {
         $cate=\DB::select('select * from category');
-        return view('admin.posts.create',compact('cate'));
+        $jr=\DB::select('select * from journalist');
+        return view('admin.posts.create',compact('cate','jr'));
     }
     public function cateid($id) 
     {
