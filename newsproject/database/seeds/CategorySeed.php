@@ -14,7 +14,18 @@ class CategorySeed extends Seeder
     {
         DB::table('category')->insert([
             'category_name' =>'Cosmology',
-           
+        ]);
+        DB::table('category')->insert([
+            'category_name' =>'Astronomy',
+        ]);
+        DB::table('category')->insert([
+            'category_name' =>'Health',
+        ]);
+        DB::table('category')->insert([
+            'category_name' =>'Earth',
+        ]);
+        DB::table('category')->insert([
+            'category_name' =>'Ecosystems',
         ]);
     }
 }

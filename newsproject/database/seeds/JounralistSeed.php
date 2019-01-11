@@ -21,5 +21,15 @@ class JounralistSeed extends Seeder
             'journalist_biography' => 'Testing journalist account',
             'journalist_photo' =>'C:\xampp\htdocs\NewsProject\newsproject\public\images\person.jpg'
         ]);
+
+        DB::table('journalist')->insert([
+            'login' => 'mikeander',
+            'email' => 'mikeander'.'@gmail.com',
+            'password' => '468520',
+            'journalist_name' => 'Mike',
+            'journalist_surname' => 'Anderson',
+            'journalist_biography' => 'Testing journalist account',
+            'journalist_photo' =>'C:\xampp\htdocs\NewsProject\newsproject\public\images\person.jpg'
+        ]);
     }
 }
