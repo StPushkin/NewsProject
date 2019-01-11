@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
 
-    public function index()
+    public function welcom()
     {
         return view('pagess/welcom');
     }
@@ -15,7 +15,8 @@ class HomeController extends Controller
     public function articles() 
     {
         $articles=\DB::select('select * from article order by article_title');
-        return view('pagess.articles',compact('articles'));
+        $cat=\DB::select('select * from category');
+        return view('pagess.articles',compact('articles','cat'));
     }
    
     
@@ -38,7 +39,18 @@ class HomeController extends Controller
         $categories=\App\Category::all();
         return view();
     }
-    
+    public function journal() 
+    {
+        $journal=\DB::select('select * from journalist order by journalist_name');
+        return view('pagess.article',compact('journal'));
+    }
+ 
+  
+    public function articlesById($id)
+    {
+        $art=\App\Article::find($id);
+        return view('pagess.articles', compact('art'));
+    }
 
 
 }

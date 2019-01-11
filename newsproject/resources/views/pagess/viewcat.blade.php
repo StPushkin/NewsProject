@@ -65,12 +65,16 @@
         </style>
     </head>
     <body>
-    @extends('layouts.app')
+@extends('layouts.app')
   
-    <div>main page</div>
-  
-
+    
+    @section('content')
+    <h1 class="text-center bg-primary">Articles</h1>
+    @foreach ($articles as $art)
    
-
-    </body>
-</html>
+    @if($article->id==$art->article_category_id)
+    <a   >Article:  {{ $art->article_title }}</a> 
+    @endif
+    
+    @endforeach
+    @stop
