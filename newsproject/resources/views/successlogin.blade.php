@@ -22,8 +22,8 @@
     <div class="alert alert-danger success-block">
      <strong>Welcome {{ Auth::user()->email }}</strong>
      <br />
-     <a href="{{ url('/main/logout') }}">Logout</a>
-     <a href="{{ url('/main') }}">go main</a>
+     
+     <a href="{{ url('/welcom') }}">go main</a>
     </div>
    @else
     <script>window.location = "/main";</script>

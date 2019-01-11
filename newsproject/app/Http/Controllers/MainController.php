@@ -8,7 +8,7 @@ class MainController extends Controller
 {
     function index()
     {
-     return view('login');
+     return view('welcom');
     }
     function checklogin(Request $request)
     {
@@ -24,7 +24,7 @@ class MainController extends Controller
 
      if(Auth::attempt($user_data))
      {
-      return redirect('main/successlogin');
+      return redirect('successlogin');
      }
      else
      {

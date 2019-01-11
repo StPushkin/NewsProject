@@ -21,6 +21,7 @@
                         <li class="nav-item"><a class="nav-link" href="{{ url('/welcom') }}">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ url('/categories') }}">Categories</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ url('/articletop') }}">Top News</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url('/journalist/posts') }}">Add Article</a></li>
                     </ul>
                     <ul class="nav navbar-nav ml-auto">
                         @if (Auth::guest())
